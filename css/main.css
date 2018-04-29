@@ -20,6 +20,11 @@ body {
   font-size: 2em;
   line-height: 1.5em;
   -webkit-font-smoothing: antialiased;
+
+  width: 480px;
+  height: 320px;
+
+  overflow: hidden;
 }
 
 /**
@@ -239,6 +244,19 @@ sup {
 }
 
 /* CUSTOM */
+.region.top.left {
+   width: 230px;
+}
+
+.region.top.right {
+   width: 230px;
+   overflow: hidden;
+}
+
+.module.clock.clock {
+   margin-bottom: 12px;
+}
+
 .module.currentweather.currentweather {
    background: rgb(0,212,255);
    background: -webkit-linear-gradient(110deg, rgba(0,212,255,1) 0%, rgba(0,75,251,1) 100%);
@@ -246,6 +264,7 @@ sup {
    background: linear-gradient(200deg, rgba(0,212,255,1) 0%, rgba(0,75,251,1) 100%);
 
    padding: 12px;
+   margin-bottom: 12px;
 
    border-radius: 8px;
    -moz-border-radius: 8px;
@@ -267,12 +286,18 @@ sup {
    -webkit-border-radius: 8px;
 }
 
+.module.currentweather.currentweather .module-content div .dimmed {
+   color: rgba(255, 255, 255, 0.6);
+}
+
 .module.currentweather.currentweather .module-content div .normal.medium:first-of-type span.wi {
    color: rgba(255, 255, 255, 0.6);
 }
 
 .module.currentweather.currentweather .module-content div .large.light {
    text-align: center;
+   font-size: 62px;
+   line-height: 62px;
 }
 
 .module.currentweather.currentweather .module-content div .large.light span.wi {
@@ -287,6 +312,8 @@ sup {
 
    padding: 12px;
 
+   margin-bottom: 12px;
+
    border-radius: 8px;
    -moz-border-radius: 8px;
    -webkit-border-radius: 8px;
@@ -299,4 +326,12 @@ sup {
 .module.weatherforecast.weatherforecast table.small .day,
 .module.weatherforecast.weatherforecast table.small .min-temp {
    color: rgba(255,255,255, 0.5);
+}
+
+.module.newsfeed.newsfeed .module-content .light.small.dimmed {
+   font-size: 16px;
+}
+
+.module.newsfeed.newsfeed .module-content .bright.medium.light {
+   font-size: 16px;
 }

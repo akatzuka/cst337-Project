@@ -54,20 +54,20 @@ var config = {
 				sound: 'alarm.mp3'
 			}
 		},
-		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check-o ",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
-					}
-				],
-				maximumEntries: 5
-			}
-		},
+		// {
+		// 	module: "calendar",
+		// 	header: "US Holidays",
+		// 	position: "top_left",
+		// 	config: {
+		// 		calendars: [
+		// 			{
+		// 				symbol: "calendar-check-o ",
+		// 				url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+		// 			}
+		// 		],
+		// 		maximumEntries: 5
+		// 	}
+		// },
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -76,7 +76,7 @@ var config = {
 				locationID: "5374361",  //ID from http://www.openweathermap.org/help/city_list.txt
 				appid: "867e131c071180125bd88b996c21d001",
 				showFeelsLike: false,
-				showPeriodUpper: true
+				showPeriod: false
 			}
 		},
 		{
@@ -87,21 +87,36 @@ var config = {
 				location: "Monterey",
 				locationID: "5374361",  //ID from http://www.openweathermap.org/help/city_list.txt
 				appid: "867e131c071180125bd88b996c21d001",
-				maxNumberOfDays: 2
+				maxNumberOfDays: 4
 			}
 		},
+		// {
+		// 	module: "newsfeed",
+		// 	position: "top_right",
+		// 	config: {
+		// 		feeds: [
+		// 			{
+		// 				title: "New York Times",
+		// 				url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+		// 			},
+		// 			{
+		// 				title: "BBC",
+		// 				url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+		// 			}
+		// 		],
+		// 		showSourceTitle: true,
+		// 		showPublishDate: true,
+		// 	}
+		// },
 		{
-			module: "newsfeed",
-			position: "bottom_bar",
+			module: 'MMM-Carousel',
 			config: {
-				feeds: [
-					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-					}
-				],
-				showSourceTitle: true,
-				showPublishDate: true
+				transitionInterval: 10000,
+				ignoreModules: ['clock', 'MMM-AlarmClock'],
+				mode: 'slides',
+				slides: [
+				  ['currentweather', 'weatherforecast']
+				]
 			}
 		}
 	]
